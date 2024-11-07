@@ -1,0 +1,77 @@
+---
+layout: default
+cover: 'w7-kagayaki_wth_logo.jpg'
+---
+
+<div class="post-content">
+  <h4>
+  祝！2024年3月16日北陸新幹線の福井県の敦賀(つるが)延伸！
+  </h4>
+  <p>
+    地方地域の発展と技術の進歩が交差するこの機会に北陸新幹線沿線勢でAWSの勉強会&交流会をやりましょう！<br/>
+    北陸新幹線の延伸は、地域経済に新たな活力をもたらすと共に、関東含め北陸内外からの技術コミュニティへの更なるアクセスを提供します。<br/>
+    この勉強会では、AWSに関する基礎知識から最先端の技術まで幅広いテーマを扱い、ビギナーから上級者までどなたでも参加できるセッションを目指します。
+  </p>
+</div>
+
+<div class="home">
+
+    {% capture currentDate %}{{'now' | date: '%s' }}{% endcapture %}
+
+    <div class="clearfix">
+
+      <h1 class="event-time-heading fix-top">次のイベント</h1>
+
+
+      {% for post in site.posts reversed %}
+
+        {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+        {% if blogDate >= currentDate %}
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            {% if post.cover %}
+              {% assign cover_url= post.cover %}
+            {% else %}
+              {% assign cover_url= 'w7-kagayaki.jpg' %}
+            {% endif %}
+            <div class="event-sqaure" style="background-image:url({{cover_url}});">
+              <h2>{{ post.title }} <span>{{ post.date | date: "%b %-d, %Y" }}</span></h2>
+              <div class='event-square-overlay'></div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  <hr/>
+    <div class="clearfix">
+
+      <h1 class="event-time-heading">過去のイベント</h1>
+      {% for post in site.posts %}
+
+        {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+
+        {% if blogDate < currentDate %}
+
+          {% if post.ext_url %}
+            {% assign post_url = post.ext_url %}
+          {% else %}
+            {% assign post_url = post.url | prepend: site.baseurl %}
+          {% endif %}
+          <a href="{{post_url}}">
+            {% if post.cover %}
+              {% assign cover_url= post.cover %}
+            {% else %}
+              {% assign cover_url= 'w7-kagayaki.jpg' %}
+            {% endif %}
+            <div class="event-sqaure" style="background-image:url({{cover_url}});">
+              <h2>{{ post.title }} <span>{{ post.date | date: "%b %-d, %Y" }}</span></h2>
+              <div class='event-square-overlay'></div>
+            </div>
+          </a>
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+</div>
