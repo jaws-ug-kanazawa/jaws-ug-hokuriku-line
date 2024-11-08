@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JAWS-UG北陸新幹線</title>
+    <description>北陸新幹線沿線のAWSのユーザーグループ勉強会、JAWS-UG北陸新幹線の告知＆記録サイト。
+</description>
+    <link>https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/</link>
+    <atom:link href="https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Nov 2024 16:45:57 +0900</pubDate>
+    <lastBuildDate>Fri, 08 Nov 2024 16:45:57 +0900</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>#3 (計画中！)3月ごろ新潟開催?</title>
+        <description>&lt;p&gt;新潟か上越で計画中！お待ちください。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0900</pubDate>
+        <link>https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/niigata.html</link>
+        <guid isPermaLink="true">https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/niigata.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>#2 富山開催 &amp; UG富山キックオフ</title>
+        <description>&lt;p&gt;JAWS-UG 富山&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Sep 2024 00:00:00 +0900</pubDate>
+        <link>https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/toyama.html</link>
+        <guid isPermaLink="true">https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/toyama.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>#1 福井開催</title>
+        <description>&lt;p&gt;JAWS-UG 金沢&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Apr 2024 00:00:00 +0900</pubDate>
+        <link>https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/fukui.html</link>
+        <guid isPermaLink="true">https://jaws-ug-kanazawa.github.io/jaws-ug-hokuriku-line/event/fukui.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
