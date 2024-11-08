@@ -6,15 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: JAWS-UG 北陸新幹線
+title: JAWS-UG北陸新幹線
 
 event_label: イベント
 
 description: > # this means to ignore newlines until "baseurl:"
   Simple Jekyll theme to host internal/external events happening in and around your area. Free free to contribute or fork the repo.
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "/jaws-ug-hokuriku-line" # the subpath of your site, e.g. /blog
+url: "https://jaws-ug-kanazawa.github.io" # the base hostname & protocol for your site
 
 #These settings might be able to go?
 author: PharaohKJ

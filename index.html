@@ -1,6 +1,6 @@
 ---
 layout: default
-cover: 'w7-kagayaki_wth_logo.jpg'
+cover: '/w7-kagayaki.jpg'
 ---
 
 <div class="post-content">
@@ -30,12 +30,12 @@ cover: 'w7-kagayaki_wth_logo.jpg'
         {% if blogDate >= currentDate %}
           <a href="{{ post.url | prepend: site.baseurl }}">
             {% if post.cover %}
-              {% assign cover_url= post.cover %}
+              {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% else %}
-              {% assign cover_url= 'w7-kagayaki.jpg' %}
+              {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-              <h2>{{ post.title }} <span>{{ post.date | date: "%b %-d, %Y" }}</span></h2>
+              <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
               <div class='event-square-overlay'></div>
             </div>
           </a>
@@ -59,12 +59,12 @@ cover: 'w7-kagayaki_wth_logo.jpg'
           {% endif %}
           <a href="{{post_url}}">
             {% if post.cover %}
-              {% assign cover_url= post.cover %}
+              {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% else %}
-              {% assign cover_url= 'w7-kagayaki.jpg' %}
+              {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-              <h2>{{ post.title }} <span>{{ post.date | date: "%b %-d, %Y" }}</span></h2>
+              <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
               <div class='event-square-overlay'></div>
             </div>
           </a>
