@@ -4,73 +4,72 @@ cover: '/w7-kagayaki.jpg'
 ogp: '/w7-kagayaki_with_logo.jpg'
 ---
 
-<div class="post-content">
-  <h3> JAWS-UG北陸新幹線とは？</h3>
-  <p>
-    北陸新幹線沿線のAWSのユーザーグループ勉強会のメンバーで合同勉強会を行おうという勉強会実施グループです。<br>
-    2024年3月16日北陸新幹線の福井県の敦賀(つるが)延伸を記念して第1回が行われました。そこからリレー形式で沿線を回って実施しています。<br>
-    北陸新幹線の延伸は、地域経済に新たな活力をもたらすと共に、関東含め北陸内外からの技術コミュニティへの更なるアクセスを提供します。<br/>
-    そのアクセスを活用し、全国から登壇者&参加者を募り、AWSに関する基礎知識から最先端の技術まで幅広いテーマを扱い、ビギナーから上級者までどなたでも参加できる勉強会を目指します。
-</div>
-
 <div class="home">
 
     {% capture currentDate %}{{'now' | date: '%s' }}{% endcapture %}
 
     <div class="clearfix">
 
-      <h1 class="event-time-heading fix-top">次のイベント</h1>
-
-
-      {% for post in site.posts reversed %}
-
+        <h2 class="event-time-heading fix-top">次のイベント</h2>
+        {% for post in site.posts reversed %}
         {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
-
         {% if blogDate >= currentDate %}
-          <a href="{{ post.url | prepend: site.baseurl }}">
+        <a href="{{ post.url | prepend: site.baseurl }}">
             {% if post.cover %}
-              {% assign cover_url= post.cover | prepend: site.baseurl %}
+            {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% else %}
-              {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
+            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-              <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
-              <div class='event-square-overlay'></div>
+                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
+                <div class='event-square-overlay'></div>
             </div>
-          </a>
+        </a>
         {% endif %}
-      {% endfor %}
+        {% endfor %}
     </div>
-  <hr/>
+    <div class="post-content">
+      <h2 class="event-time-heading"> JAWS-UG北陸新幹線とは？</h2>
+        <p style="text-indent: 1em;">
+            北陸新幹線沿線のAWSのユーザーグループ勉強会のメンバーで合同勉強会を行おうという勉強会実施グループです。
+        </p>
+        <p style="text-indent: 1em;">
+            2024年3月16日北陸新幹線の福井県の敦賀(つるが)延伸を記念して第1回が行われました。そこからリレー形式で沿線を回って実施しています。
+        </p>
+        <p style="text-indent: 1em;">
+            北陸新幹線の延伸は、地域経済に新たな活力をもたらすと共に、関東含め北陸内外からの技術コミュニティへの更なるアクセスを提供します。
+            そのアクセスを活用し、全国から登壇者&参加者を募り、AWSに関する基礎知識から最先端の技術まで幅広いテーマを扱い、ビギナーから上級者までどなたでも参加できる勉強会を目指します。
+        </p>
+    </div>
     <div class="clearfix">
 
-      <h1 class="event-time-heading">過去のイベント</h1>
-      {% for post in site.posts %}
+        <h2 class="event-time-heading">過去のイベント</h2>
+        {% for post in site.posts %}
 
         {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
 
         {% if blogDate < currentDate %}
 
-          {% if post.ext_url %}
-            {% assign post_url = post.ext_url %}
-          {% else %}
-            {% assign post_url = post.url | prepend: site.baseurl %}
-          {% endif %}
-          <a href="{{post_url}}">
+        {% if post.ext_url %}
+        {% assign post_url = post.ext_url %}
+        {% else %}
+        {% assign post_url = post.url | prepend: site.baseurl %}
+        {% endif %}
+        <a href="{{post_url}}">
             {% if post.cover %}
-              {% assign cover_url= post.cover | prepend: site.baseurl %}
+            {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% else %}
-              {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
+            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-              <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
-              <div class='event-square-overlay'></div>
+                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
+                <div class='event-square-overlay'></div>
             </div>
-          </a>
+        </a>
 
         {% endif %}
 
-      {% endfor %}
+        {% endfor %}
     </div>
 
 </div>
