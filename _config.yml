@@ -11,7 +11,7 @@ title: JAWS-UG北陸新幹線
 event_label: イベント
 
 description: > # this means to ignore newlines until "baseurl:"
-  Simple Jekyll theme to host internal/external events happening in and around your area. Free free to contribute or fork the repo.
+  北陸新幹線沿線のAWSのユーザーグループ勉強会、JAWS-UG北陸新幹線の告知＆記録サイト。
 
 baseurl: "/jaws-ug-hokuriku-line" # the subpath of your site, e.g. /blog
 url: "https://jaws-ug-kanazawa.github.io" # the base hostname & protocol for your site
