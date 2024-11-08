@@ -250,7 +250,7 @@
     }
 
     @include media-query($on-palm){
-      width: 50%;
+      width: 100%;
     }
 }
 
@@ -299,11 +299,28 @@
   background-position: center center;
   z-index: 1;
   border-bottom:1px solid #E8E8E8;
+  align-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .3);
+  background-blend-mode: overlay;
   @include media-query($on-laptop){
     height: 250px;
   }
   @include media-query($on-palm){
     height: 200px;
+  }
+}
+
+.blog-cover-text{
+  font-family: 'Zen Kaku Gothic Antique', serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xxx-large;
+  @include media-query($on-laptop){
+    font-size: xxx-large;
+  }
+  @include media-query($on-palm){
+    font-size: xx-large;
   }
 }
 
@@ -342,6 +359,9 @@
     left:10px;
     font-size:20px;
     z-index: 3;
+    @include media-query($on-palm){
+      font-size: 16px;
+    }
     span{
       font-size:14px;
       display:block;
