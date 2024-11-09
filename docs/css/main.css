@@ -470,7 +470,10 @@ footer {
 
 .event-time-heading {
   margin-bottom: 0px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  border-bottom-width: 1px;
+  border-bottom-color: #111;
+  border-bottom-style: dashed; }
 
 /**
  * Syntax highlighting styles
