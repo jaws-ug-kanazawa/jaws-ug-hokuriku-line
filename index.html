@@ -15,10 +15,9 @@ ogp: '/w7-kagayaki_with_logo.jpg'
         {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
         {% if blogDate >= currentDate %}
         <a href="{{ post.url | prepend: site.baseurl }}">
+            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% if post.cover %}
             {% assign cover_url= post.cover | prepend: site.baseurl %}
-            {% else %}
-            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
                 <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
@@ -32,7 +31,7 @@ ogp: '/w7-kagayaki_with_logo.jpg'
         <h2 class="event-time-heading">JAWS-UG北陸新幹線とは？</h2>
         <div style="margin: 20px 20px 0 0;">
         <p style="text-indent: 1em;">
-            北陸新幹線沿線のAWSのユーザーグループ勉強会のメンバーで合同勉強会を行おうという勉強会実施グループです。
+            北陸新幹線沿線の<a href="https://jaws-ug.jp">JAWS-UG</a>(AWSのユーザーグループ勉強会)のメンバーで合同勉強会を行おうという企画です。
         </p>
         <p style="text-indent: 1em;">
             2024年3月16日北陸新幹線の福井県の敦賀(つるが)延伸を記念して第1回が行われました。そこからリレー形式で沿線を回って実施しています。
