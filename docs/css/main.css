@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 300 16px/1.5 "Zen Kaku Gothic Antique", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 20px/1.5 "Zen Kaku Gothic Antique", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: calc($spacing-unit / 2); }
+  margin-bottom: calc(30px/2); }
 
 /**
  * Images
@@ -46,7 +46,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 17.5px; }
 
 /**
  * Lists
@@ -82,7 +82,7 @@ a {
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
-  padding-left: calc($spacing-unit / 2);
+  padding-left: calc(30px / 2);
   font-size: 18px;
   letter-spacing: -1px;
   font-style: italic; }
@@ -124,8 +124,8 @@ pre {
     .wrapper {
       max-width: -webkit-calc(800px - (30px));
       max-width: calc(800px - (30px));
-      padding-right: calc($spacing-unit / 2);
-      padding-left: calc($spacing-unit / 2); } }
+      padding-right: calc(30px / 2);
+      padding-left: calc(30px / 2); } }
 
 /**
  * Clearfix
@@ -183,7 +183,7 @@ footer {
     .site-nav {
       position: absolute;
       top: 9px;
-      right: calc($spacing-unit / 2);
+      right: calc(30px / 2);
       background-color: #fdfdfd;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
@@ -230,7 +230,7 @@ footer {
 
 .footer-heading {
   font-size: 18px;
-  margin-bottom: calc($spacing-unit / 2); }
+  margin-bottom: calc(30px / 2); }
 
 .contact-list,
 .social-media-list {
@@ -240,12 +240,12 @@ footer {
 .footer-col-wrapper {
   font-size: 15px;
   color: #828282;
-  margin-left: calc(-1 * $spacing-unit / 2); }
+  margin-left: calc(-1 * 30px / 2); }
 
 .footer-col {
   float: left;
-  margin-bottom: calc($spacing-unit / 2);
-  padding-left: calc($spacing-unit / 2); }
+  margin-bottom: calc(30px / 2);
+  padding-left: calc(30px / 2); }
 
 .footer-col-1 {
   width: -webkit-calc(35% - (30px / 2));
@@ -293,7 +293,7 @@ footer {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 17.5px;
   color: #828282; }
 
 .post-link {
@@ -414,13 +414,13 @@ footer {
     position: absolute;
     bottom: 0px;
     left: 10px;
-    font-size: 20px;
+    font-size: 32px;
     z-index: 3; }
     @media screen and (max-width: 600px) {
       .event-sqaure h2 {
-        font-size: 16px; } }
+        font-size: 24px; } }
     .event-sqaure h2 span {
-      font-size: 14px;
+      font-size: 20px;
       display: block; }
 
 .event-square-overlay {
