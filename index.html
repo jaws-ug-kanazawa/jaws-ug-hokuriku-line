@@ -1,7 +1,7 @@
 ---
 layout: default
-cover: '/w7-kagayaki.jpg'
-ogp: '/w7-kagayaki_with_logo.jpg'
+cover: '/images/w7-kagayaki.webp'
+ogp: '/images/w7-kagayaki-with-logo-opg.webp'
 ---
 
 <div class="home">
@@ -15,7 +15,7 @@ ogp: '/w7-kagayaki_with_logo.jpg'
         {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
         {% if blogDate >= currentDate %}
         <a href="{{ post.url | prepend: site.baseurl }}">
-            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
+            {% assign cover_url= '/images/w7-kagayaki.webp' | prepend: site.baseurl %}
             {% if post.cover %}
             {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% endif %}
@@ -60,7 +60,7 @@ ogp: '/w7-kagayaki_with_logo.jpg'
             {% if post.cover %}
             {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% else %}
-            {% assign cover_url= '/w7-kagayaki.jpg' | prepend: site.baseurl %}
+            {% assign cover_url= '/images/w7-kagayaki.webp' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
                 <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
   {% include head.html %}
 
@@ -7,7 +7,7 @@
 
     {% include header.html %}
 
-    {% assign back_img_url = '/w7-kagayaki.jpg' | prepend: site.baseurl %}
+    {% assign back_img_url = '/images/w7-kagayaki.webp' | prepend: site.baseurl %}
     {% if page.cover %}
       {% assign back_img_url = page.cover | prepend: site.baseurl %}
     {% endif %}
