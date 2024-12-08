@@ -31,3 +31,6 @@ future: true
 permalink: /event/:title.html
 
 destination: docs
+
+include:
+  - images
