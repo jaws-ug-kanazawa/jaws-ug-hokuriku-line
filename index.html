@@ -25,7 +25,7 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
             {% assign cover_url= post.cover | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
+                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日(%a)" }}</span></h2>
                 <div class='event-square-overlay'></div>
             </div>
         </a>
@@ -68,7 +68,7 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
             {% assign cover_url= '/images/w7-kagayaki.webp' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%-d日(%a)" }}</span></h2>
+                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日(%a)" }}</span></h2>
                 <div class='event-square-overlay'></div>
             </div>
         </a>

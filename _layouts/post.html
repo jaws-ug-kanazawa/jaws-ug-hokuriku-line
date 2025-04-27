@@ -12,7 +12,7 @@ layout: default
         <h3 class="post-organisers-name">By {{organiser.name}}</h3>
     {% endif %}
     <h2 class="post-date">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y年%m月%-d日(%a)" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h2>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y年%m月%d日(%a)" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h2>
     <h3 class="post-time">開場 {{ page.start_time}} 〜 {{page.end_time }}</h3>
   </header>
 
@@ -26,7 +26,7 @@ layout: default
 
     {% if organiser.email %}
         <div>
-            <a href='mailto:{{organiser.email}}?subject=Register interest for {{page.title}} on {{ page.date | date: "%Y年 %m月%-d日(%a)" }}&body=Hi! Im interested in your event. Can I come please?' class="button button-primary">Register Interest</a>
+            <a href='mailto:{{organiser.email}}?subject=Register interest for {{page.title}} on {{ page.date | date: "%Y年 %m月%d日(%a)" }}&body=Hi! Im interested in your event. Can I come please?' class="button button-primary">Register Interest</a>
         </div>
     {% endif %}
 
