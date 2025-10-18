@@ -2,13 +2,16 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <h1 class="footer-heading">{{ site.title }}</h1>
     <p>
       {{ site.description }}
       {% include icon-github.html %}
       {% include icon-github-page.html %}
       {% include icon-rss.html %}
     </p>
+      <p>
+          <span class="text-small"> このページへの短縮URL → <a href="{{ site.shorten_url }}">{{site.shorten_url}}</a></span>
+      </p>
   </div>
 
 </footer>

@@ -28,7 +28,25 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
                 {% if post.provisional_date %}
                     <h2>{{ post.title }} 企画中 <span>{{ post.provisional_date }}</span></h2>
                 {% else %}
-                    <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日(%a)" }}</span></h2>
+                    {%- assign weekday = post.date | date: '%a' -%}
+                    {%- capture weekday_jp -%}
+                    {%- if weekday == 'Sun' -%}
+                    {{- '(日)' -}}
+                    {%- elsif weekday == 'Mon' -%}
+                    {{- '(月)' -}}
+                    {%- elsif weekday == 'Tue' -%}
+                    {{- '(火)' -}}
+                    {%- elsif weekday == 'Wed' -%}
+                    {{- '(水)' -}}
+                    {%- elsif weekday == 'Thu' -%}
+                    {{- '(木)' -}}
+                    {%- elsif weekday == 'Fri' -%}
+                    {{- '(金)' -}}
+                    {%- elsif weekday == 'Sat' -%}
+                    {{- '(土)' -}}
+                    {%- endif -%}
+                    {%- endcapture -%}
+                    <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日" | append: weekday_jp}}</span></h2>
                 {% endif %}
                 <div class='event-square-overlay'></div>
             </div>
@@ -72,7 +90,25 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
             {% assign cover_url= '/images/w7-kagayaki.webp' | prepend: site.baseurl %}
             {% endif %}
             <div class="event-sqaure" style="background-image:url({{cover_url}});">
-                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日(%a)" }}</span></h2>
+                {%- assign weekday = post.date | date: '%a' -%}
+                {%- capture weekday_jp -%}
+                {%- if weekday == 'Sun' -%}
+                {{- '(日)' -}}
+                {%- elsif weekday == 'Mon' -%}
+                {{- '(月)' -}}
+                {%- elsif weekday == 'Tue' -%}
+                {{- '(火)' -}}
+                {%- elsif weekday == 'Wed' -%}
+                {{- '(水)' -}}
+                {%- elsif weekday == 'Thu' -%}
+                {{- '(木)' -}}
+                {%- elsif weekday == 'Fri' -%}
+                {{- '(金)' -}}
+                {%- elsif weekday == 'Sat' -%}
+                {{- '(土)' -}}
+                {%- endif -%}
+                {%- endcapture -%}
+                <h2>{{ post.title }} <span>{{ post.date | date: "%Y年 %m月%d日" | append: weekday_jp}}</span></h2>
                 <div class='event-square-overlay'></div>
             </div>
         </a>
@@ -81,5 +117,4 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
 
         {% endfor %}
     </div>
-
 </div>

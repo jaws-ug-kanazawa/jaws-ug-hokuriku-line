@@ -42,6 +42,9 @@ $on-laptop:        800px;
     }
 }
 
+.text-small {
+  font-size: 0.875em; /* または 14px、12px など */
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

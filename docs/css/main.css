@@ -1,4 +1,9 @@
+@charset "UTF-8";
 @use "sass:color";
+.text-small {
+  font-size: 0.875em;
+  /* または 14px、12px など */ }
+
 @use "sass:color";
 /**
  * Reset some basic elements
