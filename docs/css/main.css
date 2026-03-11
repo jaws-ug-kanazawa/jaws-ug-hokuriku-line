@@ -481,6 +481,12 @@ footer {
   border-bottom-color: #111;
   border-bottom-style: dashed; }
 
+.highlight-message {
+  background: #fff3a3;
+  text-decoration: underline dashed;
+  text-decoration-thickness: 0.01em;
+  text-underline-offset: 0.12em; }
+
 /**
  * Syntax highlighting styles
  */
