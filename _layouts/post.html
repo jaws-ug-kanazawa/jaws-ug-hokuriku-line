@@ -21,6 +21,10 @@ layout: default
   {% endif %}
 
     <div class="post-content" itemprop="articleBody">
+    {% if page.ext_url %}
+      <p>自動で外部サイトへ移動します。移動しない場合は以下のリンクをクリックしてください。</p>
+      <p><a href="{{ page.ext_url }}">{{ page.ext_url }}</a></p>
+    {% endif %}
     {{ content }}
   </div>
 
