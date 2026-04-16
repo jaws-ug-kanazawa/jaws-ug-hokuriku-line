@@ -24,6 +24,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include share-x.html %}
+
     {% if organiser.email %}
         <div>
             <a href='mailto:{{organiser.email}}?subject=Register interest for {{page.title}} on {{ page.date | date: "%Y年 %m月%d日(%a)" }}&body=Hi! Im interested in your event. Can I come please?' class="button button-primary">Register Interest</a>

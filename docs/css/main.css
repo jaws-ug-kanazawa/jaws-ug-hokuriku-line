@@ -630,10 +630,11 @@ footer {
 
 .button.button-primary {
   color: #ffffff;
-  background: #965CB8;
-  box-shadow: #324832 0 2px 0 0;
+  background: #2a7ae2;
+  box-shadow: #1b4d8f 0 2px 0 0;
   padding: 10px 16px 8px 16px;
   border-radius: 6px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: background-color 0.2s ease; }
   .button.button-primary:hover {
-    background: #ab82b8; }
+    background: #4a90e2; }

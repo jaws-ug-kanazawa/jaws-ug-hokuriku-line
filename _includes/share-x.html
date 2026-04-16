@@ -1,0 +1,34 @@
+<div class="share-button">
+    {% if page.date %}
+        {% assign share_date = page.date | date: "%Y年%m月%d日" %}
+        {% assign share_hashtags = page.hashtag | join: " " %}
+        {% assign share_text = share_date | append: " - " | append: page.title | append: " - " | append: share_hashtags %}
+    {% else %}
+        {% assign share_text = page.title %}
+    {% endif %}
+    <a href="https://x.com/intent/post?text={{ share_text | url_encode }}&url={{ site.url }}{{ site.baseurl }}{{ page.url | url_encode }}" class="button button-primary" target="_blank" rel="nofollow noopener">
+        <span class="icon">{% include icon-x.svg %}</span>でシェア
+    </a>
+</div>
+
+<style>
+.share-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.share-button .button {
+    display: inline-flex;
+    align-items: center;
+}
+.share-button .icon {
+    display: inline-flex;
+    margin-right: 5px;
+}
+.share-button .icon svg {
+    width: 16px;
+    height: 16px;
+}
+.share-button .icon svg path {
+    fill: #ffffff;
+}
+</style>
