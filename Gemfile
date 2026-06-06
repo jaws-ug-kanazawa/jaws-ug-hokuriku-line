@@ -5,4 +5,4 @@ source "https://rubygems.org"
 # gem "rails"
 
 gem 'logger'
-gem 'github-pages'
+gem 'jekyll'
