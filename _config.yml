@@ -31,7 +31,7 @@ future: true
 
 permalink: /event/:title.html
 
-destination: docs
+destination: ./_site
 
 include:
   - images
