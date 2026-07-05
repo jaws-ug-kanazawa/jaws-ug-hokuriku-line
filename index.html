@@ -6,13 +6,13 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
 
 <div class="home">
 
-    {% capture currentDate %}{{'now' | date: '%s' }}{% endcapture %}
+    {% capture currentDate %}{{'now' | date: '%Y%m%d' }}{% endcapture %}
 
     <div class="clearfix">
 
         <h2 class="event-time-heading fix-top">次のイベント</h2>
         {% for post in site.posts reversed %}
-        {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+        {% capture blogDate %}{{post.date | date: '%Y%m%d' }}{% endcapture %}
         {% if blogDate >= currentDate %}
         {% if post.ext_url %}
         {% assign post_url = post.ext_url %}
@@ -51,6 +51,7 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
                 <div class='event-square-overlay'></div>
             </div>
         </a>
+        {% include hashtag-buttons.html hashtag=post.hashtag %}
         {% endif %}
         {% endfor %}
     </div>
@@ -86,7 +87,7 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
         <h2 class="event-time-heading">過去のイベント</h2>
         {% for post in site.posts %}
 
-        {% capture blogDate %}{{post.date | date: '%s' }}{% endcapture %}
+        {% capture blogDate %}{{post.date | date: '%Y%m%d' }}{% endcapture %}
 
         {% if blogDate < currentDate %}
 

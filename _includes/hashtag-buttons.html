@@ -1,0 +1,59 @@
+{% assign hashtag_source = include.hashtag | default: page.hashtag %}
+{% if hashtag_source %}
+    {% assign page_hashtags = hashtag_source | join: " " %}
+    <div class="hashtag-buttons">
+        <p class="hashtag-text">{{ page_hashtags }}</p>
+        <button type="button" class="button button-primary" data-hashtags="{{ page_hashtags | escape }}" onclick="copyHashtags(this)">
+            <span class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></span><span class="label">ハッシュタグをコピー</span>
+        </button>
+        <a href="https://x.com/intent/post?text={{ page_hashtags | url_encode }}" class="button button-primary" target="_blank" rel="nofollow noopener">
+            <span class="icon">{% include icon-x.svg %}</span><span class="label">で投稿</span>
+        </a>
+    </div>
+    <script>
+        function copyHashtags(button) {
+            var hashtags = button.getAttribute("data-hashtags");
+            var label = button.querySelector(".label");
+            navigator.clipboard.writeText(hashtags).then(function () {
+                var originalText = label.textContent;
+                label.textContent = "コピーしました";
+                setTimeout(function () {
+                    label.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+    <style>
+    .hashtag-buttons {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .hashtag-buttons .hashtag-text {
+        margin-bottom: 10px;
+    }
+    .hashtag-buttons .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        padding: 0 15px;
+        font-size: 14px;
+        line-height: 38px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        border: none;
+        cursor: pointer;
+    }
+    .hashtag-buttons .icon {
+        display: inline-flex;
+        margin-right: 5px;
+    }
+    .hashtag-buttons .icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .hashtag-buttons .icon svg path {
+        fill: #ffffff;
+    }
+    </style>
+{% endif %}
