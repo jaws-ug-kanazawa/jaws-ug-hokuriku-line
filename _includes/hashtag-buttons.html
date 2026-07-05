@@ -6,7 +6,7 @@
         <button type="button" class="button button-primary" data-hashtags="{{ page_hashtags | escape }}" onclick="copyHashtags(this)">
             <span class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></span><span class="label">ハッシュタグをコピー</span>
         </button>
-        <a href="https://x.com/intent/post?text={{ page_hashtags | url_encode }}" class="button button-primary" rel="nofollow noopener">
+        <a href="https://x.com/intent/tweet?text={{ page_hashtags | url_encode }}" class="button button-primary" rel="nofollow noopener">
             <span class="icon">{% include icon-x.svg %}</span><span class="label">で投稿</span>
         </a>
         <button type="button" class="button button-primary webshare-button" data-share-text="{{ page_hashtags | escape }}" onclick="shareHashtags(this)" hidden>
