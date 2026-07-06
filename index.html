@@ -9,7 +9,16 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
     {% capture currentDate %}{{'now' | date: '%Y%m%d' }}{% endcapture %}
 
     <div class="clearfix">
+        {% assign has_next_event = false %}
+        {% for post in site.posts reversed %}
+        {% capture blogDate %}{{post.date | date: '%Y%m%d' }}{% endcapture %}
+        {% if blogDate >= currentDate %}
+        {% assign has_next_event = true %}
+        {% break %}
+        {% endif %}
+        {% endfor %}
 
+        {% if has_next_event %}
         <h2 class="event-time-heading fix-top">次のイベント</h2>
         {% for post in site.posts reversed %}
         {% capture blogDate %}{{post.date | date: '%Y%m%d' }}{% endcapture %}
@@ -54,6 +63,7 @@ ogp: '/images/w7-kagayaki-with-logo-opg.webp'
         {% include hashtag-buttons.html hashtag=post.hashtag %}
         {% endif %}
         {% endfor %}
+        {% endif %}
     </div>
     <div class="clearfix">
         <h2 class="event-time-heading">JAWS-UG北陸新幹線とは？</h2>
